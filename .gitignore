@@ -1,0 +1,51 @@
+# Temporary files
+*.swp
+*.tmp
+*.bak
+*~
+*.orig
+*.rej
+.*.sw?
+.DS_Store
+
+# CMake-specific
+/*/CMakeUserPresets.json
+/CMakeSettings.json
+cmake-build-*/
+.build-cache/
+/setup_build/
+CMakeFiles/
+CMakeCache.txt
+
+# Python-related
+*.pyc
+.ipynb_checkpoints/
+*.venv/
+
+# Editor and IDE files
+.vscode/
+*.code-workspace
+.cache/
+.env
+.idea/
+
+# Compiled objects and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Git metadata
+.gitusers
+
+# Build directories
+/build*
+
+# Logs
+*.log
+
+# Miscellaneous caches
+.ccache
