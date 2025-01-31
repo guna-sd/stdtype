@@ -1,23 +1,23 @@
-#ifndef STDTYPE_DIALECT
-#define STDTYPE_DIALECT
-
-include "mlir/IR/DialectBase.td"
+include "mlir/IR/OpBase.td"
 
 def StdType_Dialect : Dialect {
   let name = "stdtype";
-  let cppNamespace = "::mlir::StdType";
+  let cppNamespace = "::mlir::stdtype";
+  let description = [{
+    The stdtype Dialect is a unified solution for representing types within MLIR.
+  }];
 
-  let useDefaultAttributePrinterParser = 1;
   let hasConstantMaterializer = 1;
+  let useDefaultAttributePrinterParser = 0;
+  let useDefaultTypePrinterParser = 0;
 
   let extraClassDeclaration = [{
-    static bool isCompatibleType(Type);
-
-    Type parseType(DialectAsmParser &p) const override;
-    void printType(Type, DialectAsmPrinter &p) const override;
-    
+  private:
+    void registerAttributes();
+    void registerLocationAttributes();
     void registerTypes();
+
+  public:
+    //
   }];
 }
-
-#endif
