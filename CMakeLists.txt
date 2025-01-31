@@ -2,11 +2,8 @@ cmake_minimum_required(VERSION 3.20.0)
 
 project(stdtype LANGUAGES CXX C)
 
-set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
-
-set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ standard to conform to")
-
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  find_package(LLVM REQUIRED CONFIG)
   find_package(MLIR REQUIRED CONFIG)
 
   message(STATUS "Using MLIRConfig.cmake in: ${MLIR_DIR}")
