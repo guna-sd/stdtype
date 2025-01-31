@@ -43,6 +43,7 @@ CMakeCache.txt
 
 # Build directories
 /build*
+/externals/build*
 
 # Logs
 *.log

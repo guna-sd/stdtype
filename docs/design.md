@@ -67,7 +67,7 @@ For machine learning and scientific computing, stdtype supports tensor operation
 - **Reduction operations** (e.g., summing across dimensions)
 
 
-## Future Extensions
+## Further Extensions
 
 ### 1. **Sparse Tensors**
 
